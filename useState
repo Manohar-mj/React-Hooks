@@ -1,0 +1,84 @@
+import { useCallback, useState } from "react";
+export default function App(){
+
+  // const [count,setCount]=useState(0);
+  // function hadleIncem(){
+  //   setCount(count+1);
+  // }
+  // function handleDecm(){
+  //   setCount(count-1);
+  // }
+  // return(
+  //   <div>
+  //     <h2>Count: {count}</h2>
+  //     <button onClick={hadleIncem}>Increment</button>
+  //     <button onClick={handleDecm}>Decrement</button>
+      
+  //   </div>
+  // )
+
+    // const[name,setName]=useState("MJ");
+    // return(
+    //   <div>
+    //     <h2>Hello❤️{name}!❤️</h2>
+    //     <input type="text" value={name} onChange={(e)=> setName(e.target.value)}/>
+
+    //   </div>
+    // )
+
+
+
+    // const[todos,setTodo]=useState(["Chicken","Mutton"]);
+
+    // return(
+    //   <div>
+    //     <ul>
+    //       {todos.map((todo,index)=>{
+    //         <li key={index}>{todo}</li>
+    //       })}
+    //     </ul>
+    //   </div>
+    // )
+
+
+    // const [toggle,setToggle]=useState(false);
+    // return(
+    //   <div>
+    //     <p>{toggle ?'ON':'OFF'}</p>
+    //     <button  onClick={()=> setToggle(!toggle)}>Toogled</button>
+    //   </div>
+    // )
+  
+
+  // const [isToggle,setToggle]=useState(false);
+
+  //   function lightToggle(){
+  //    return <p style={{backgroundColor:"yellow"}}>Yes I am Light</p>
+  //   }
+  // function darkToggle() {
+  //   return <p style={{ backgroundColor: "Black" ,color:"white"}}>No I am Dark</p>
+  // }
+  // return(
+  //   <div>
+  //     <p>
+  //       {isToggle ? lightToggle() :darkToggle()}
+  //     </p> 
+  //     <button onClick={()=> setToggle(!isToggle)}>Make me light</button>
+  //   </div>
+  // )
+
+
+  const [count,setCount]=useState(0);
+
+   const handleEvent=useCallback(()=>{
+    setCount((e)=>e+1)
+   },[  ]);
+
+  return(
+    <div>
+        <p>Count:{count}</p>
+        <button onClick={handleEvent}>Increment</button>
+    </div>
+  )
+  
+}
